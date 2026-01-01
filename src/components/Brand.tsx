@@ -15,9 +15,9 @@ export const Brand = () => {
     [scaleParams.winWidthRatio, 2]
   );
   const dampedScale = useSpring(scale, {
-    stiffness: 100,
-    damping: 16,
-    mass: 0.5,
+    stiffness: 180,
+    damping: 10,
+    mass: 0.2,
   });
 
   useEffect(() => {

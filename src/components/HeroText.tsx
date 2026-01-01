@@ -39,7 +39,7 @@ export const HeroText = () => {
         right: 0,
         bottom: 0,
         opacity: "var(--opacity)",
-        padding: `${rtsc(2)} ${rtsc(2.5)}`,
+        padding: `${rtsc(1)} ${rtsc(1.5)}`,
         fontSize: `clamp(14px, ${rtsc(2)}, 15vw)`,
         fontWeight: 500,
         lineHeight: 1,

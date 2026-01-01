@@ -24,13 +24,14 @@ import ScrollSmootherWrapper from "@components/ScrollSmootherWrapper.astro";
         <div class="cta">
           <h1>Contact</h1>
           <div class="links">
-            <a href="mailto:johngohrw@gmail.com">e-mail</a>•
-            <a href="https://www.linkedin.com/in/rengwu">linkedin</a>
+            <a href="mailto:johngohrw@gmail.com">Email</a>•
+            <a href="https://www.linkedin.com/in/rengwu">LinkedIn</a>•
+            <a href="http://t.me/jongowe">Telegram</a>
           </div>
           <div class="links">
-            <s title="not ready">resume</s>•
-            <a href="https://leetcode.com/rengwu/">leetcode</a>•
-            <a href="https://github.com/johngohrw">github</a>
+            <s title="not ready">Resume</s>•
+            <a href="https://leetcode.com/rengwu/">LeetCode</a>•
+            <a href="https://github.com/johngohrw">GitHub</a>
           </div>
         </div>
       </div>
@@ -41,11 +42,12 @@ import ScrollSmootherWrapper from "@components/ScrollSmootherWrapper.astro";
   .overlay {
     position: fixed;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100svw;
+    height: 100svh;
     z-index: 100;
     mix-blend-mode: difference;
     filter: invert(1);
+    pointer-events: none;
   }
   .overlay-content {
     position: relative;
@@ -83,7 +85,7 @@ import ScrollSmootherWrapper from "@components/ScrollSmootherWrapper.astro";
     flex-wrap: wrap;
 
     gap: 0.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .cta a,
