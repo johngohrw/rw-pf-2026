@@ -1,22 +1,52 @@
+---
+import "@styles/fonts.css";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>John Rengwu</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* root scale stuff */
+  html {
+    --root-scale: calc(100vw * 0.0125);
+    --root-text-scale: 14px;
+
+    @media (min-width: 576px) {
+      --root-text-scale: 16px;
+    }
+    @media (min-width: 978px) {
+      --root-text-scale: 18px;
+    }
+    @media (min-width: 1440px) {
+      --root-text-scale: calc(100vw * 0.0125);
+    }
+  }
+
+  /* theme stuff */
+  html {
+    font-family: "SF Pro Display";
+    font-size: var(--root-text-scale);
+  }
 </style>

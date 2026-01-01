@@ -1,0 +1,349 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi/Satoshi-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi/Satoshi-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi/Satoshi-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi/Satoshi-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi/Satoshi-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi/Satoshi-MediumItalic.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi/Satoshi-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi/Satoshi-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi/Satoshi-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi/Satoshi-BlackItalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Times NR";
+  src: url("../assets/fonts/TimesNR/TimesNRSevenMTStd.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Times NR";
+  src: url("../assets/fonts/TimesNR/TimesNRSevenMTStd-Italic.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Longinus";
+  src: url("../assets/fonts/Longinus.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rekord";
+  src: url("../assets/fonts/Rekord-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stack Sans Headline";
+  src: url("../assets/fonts/StackSansHeadline/StackSansHeadline-Light.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stack Sans Headline";
+  src: url("../assets/fonts/StackSansHeadline/StackSansHeadline-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stack Sans Headline";
+  src: url("../assets/fonts/StackSansHeadline/StackSansHeadline-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stack Sans Headline";
+  src: url("../assets/fonts/StackSansHeadline/StackSansHeadline-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stack Sans Headline";
+  src: url("../assets/fonts/StackSansHeadline/StackSansHeadline-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Serrif";
+  src: url("../assets/fonts/Serrif/Serrif/Serrif-TRIAL-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Serrif Condensed";
+  src: url("../assets/fonts/Serrif/Serrif Condensed/SerrifCondensed-TRIAL-Regular.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Saans";
+  src: url("../assets/fonts/Saans/Saans/Saans-TRIAL-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Saans";
+  src: url("../assets/fonts/Saans/Saans/Saans-TRIAL-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Saans";
+  src: url("../assets/fonts/Saans/Saans/Saans-TRIAL-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Saans";
+  src: url("../assets/fonts/Saans/Saans/Saans-TRIAL-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Special Gothic";
+  src: url("../assets/fonts/Special_Gothic/SpecialGothic-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Special Gothic Condensed";
+  src: url("../assets/fonts/Special_Gothic_Condensed_One/SpecialGothicCondensedOne-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Special Gothic Expanded";
+  src: url("../assets/fonts/Special_Gothic_Expanded_One/SpecialGothicExpandedOne-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("../assets/fonts/Matter/Matter/Matter-TRIAL-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("../assets/fonts/Matter/Matter/Matter-TRIAL-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("../assets/fonts/Matter/Matter/Matter-TRIAL-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("../assets/fonts/Matter/Matter/Matter-TRIAL-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../assets/fonts/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Thin.otf")
+    format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../assets/fonts/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Extralight.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../assets/fonts/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../assets/fonts/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../assets/fonts/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../assets/fonts/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Bold.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../assets/fonts/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Extrabold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../assets/fonts/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Black.otf")
+    format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lunasima";
+  src: url("../assets/fonts/Lunasima/Lunasima-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lunasima";
+  src: url("../assets/fonts/Lunasima/Lunasima-Bold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../assets/fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../assets/fonts/sf-pro-display/SFPRODISPLAYMEDIUM.OTF")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../assets/fonts/sf-pro-display/SFPRODISPLAYBOLD.OTF")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Azeret Mono";
+  src: url("../assets/fonts/AzeretMono/AzeretMono-Variable.ttf")
+    format("truetype");
+}
