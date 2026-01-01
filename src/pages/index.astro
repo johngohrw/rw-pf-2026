@@ -3,36 +3,92 @@ import { HeroText } from "@components/HeroText";
 import { Brand } from "../components/Brand";
 import { ReactComponent } from "../components/ReactComponent";
 import Layout from "../layouts/Layout.astro";
-import { ScrollSmootherWrapper } from "@components/ScrollSmoother";
+
+import MediaBoxes from "@components/MediaBoxes.astro";
+import ScrollSmootherWrapper from "@components/ScrollSmootherWrapper.astro";
 ---
 
 <Layout>
-  <div style={{ position: "fixed" }}>
-    <Brand client:only />
-  </div>
-  <ScrollSmootherWrapper client:only>
-    <div class="frame">
-      <div class="hero-text">
-        <HeroText client:only />
-      </div>
-      <div class="hero">hi</div><div>Regular Text</div>
+  <div class="overlay">
+    <div class="overlay-content">
+      <Brand client:only />
+      <HeroText client:only />
     </div>
-    <!-- <div data-lag="0.5">lol</div> -->
-    <ReactComponent client:load />
-    {Array.from(Array(100).keys()).map((n) => <div>{n}</div>)}
-  </ScrollSmootherWrapper>
+  </div>
+  <div style={{ zIndex: 0 }}>
+    <ScrollSmootherWrapper>
+      <div class="frame">
+        <MediaBoxes />
+      </div>
+      <div class="frame centered-frame">
+        <div class="cta">
+          <h1>Contact</h1>
+          <div class="links">
+            <a href="mailto:johngohrw@gmail.com">e-mail</a>•
+            <a href="https://www.linkedin.com/in/rengwu">linkedin</a>
+          </div>
+          <div class="links">
+            <s title="not ready">resume</s>•
+            <a href="https://leetcode.com/rengwu/">leetcode</a>•
+            <a href="https://github.com/johngohrw">github</a>
+          </div>
+        </div>
+      </div>
+    </ScrollSmootherWrapper>
+  </div>
 </Layout>
 <style>
+  .overlay {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    mix-blend-mode: difference;
+    filter: invert(1);
+  }
+  .overlay-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
   .frame {
     height: 100vh;
     width: 100vw;
     position: relative;
+    z-index: 1;
   }
 
-  .hero-text {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  .centered-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .cta {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta a,
+  .cta s {
+    font-size: 1.2rem;
+    text-wrap: nowrap;
   }
 </style>

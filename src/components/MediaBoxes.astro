@@ -1,0 +1,253 @@
+---
+import iidxsearcher from "@assets/images/iidxsearcher.png";
+import marbsoli from "@assets/video/marblesolitaire.mp4";
+import wordlehelper from "@assets/images/wordlehelper.png";
+import ytcbk1 from "@assets/images/ytcbk1.png";
+import abilityarena2 from "@assets/video/abilityarena2.mp4";
+import foobar2k from "@assets/video/foobar2k.mp4";
+import mcashnav from "@assets/video/mcashnav.mov";
+import pokecards from "@assets/video/pokecards.mov";
+import sveltesudoku from "@assets/video/sveltesudoku.mov";
+import tuki from "@assets/video/tuki.mov";
+
+import { MediaFrame } from "./MediaFrames";
+
+const hardcodeditems = (
+  [
+    {
+      src: marbsoli,
+      type: "video",
+      scale: 1,
+      divStyle: {
+        background: "#d1d1b9",
+        padding: "calc(var(--root-text-scale) * 0.5)",
+      },
+      style: {
+        objectFit: "contain",
+      },
+      x: "-37.201759605528984%",
+      y: "6.294027926032219%",
+      size: "calc(clamp(200px, 24vh, 24vw) * 1)",
+      lag: 0.1399171443512286,
+    },
+    {
+      src: wordlehelper.src,
+      type: "image",
+      scale: 0.8,
+      x: "38.484735334422965%",
+      y: "4.138569324161512%",
+      size: "calc(clamp(200px, 24vh, 24vw) * 0.8)",
+      lag: 0.06453767792747862,
+      divStyle: {
+        padding: "calc(var(--root-text-scale) * 0.5)",
+        background: "#232834",
+      },
+      style: {
+        objectFit: "contain",
+      },
+    },
+    {
+      src: iidxsearcher.src,
+      type: "image",
+      scale: 1,
+      x: "-24.30398716454784%",
+      y: "-18.37590919620787%",
+      size: "calc(clamp(200px, 24vh, 24vw) * 1)",
+      lag: 0.1365310003560543,
+      style: {
+        objectFit: "cover",
+        objectPosition: "top left",
+        background: "#fafafa",
+        paddingTop: "calc(var(--root-text-scale) * 0.5)",
+        paddingLeft: "calc(var(--root-text-scale) * 0.5)",
+      },
+    },
+    {
+      src: foobar2k,
+      type: "video",
+      scale: 1.2,
+      divStyle: {
+        background: "#151515",
+        padding: "calc(var(--root-text-scale) * 0.5)",
+      },
+      style: {
+        objectFit: "contain",
+      },
+      x: "-14.060111911992292%",
+      y: "-2.7525914791209702%",
+      size: "calc(clamp(200px, 24vh, 24vw) * 1.2)",
+      lag: 0.12441908942529313,
+    },
+    {
+      src: mcashnav,
+      type: "video",
+      scale: 0.8,
+      x: "28.630861943681047%",
+      y: "-16.712935458572748%",
+      size: "calc(clamp(200px, 24vh, 24vw) * 0.8)",
+      lag: 0.07842780896952851,
+      divStyle: { background: "#f9f9f9" },
+      style: {
+        paddingTop: "calc(var(--root-text-scale) * 0.5)",
+        paddingLeft: "calc(var(--root-text-scale) * 0.5)",
+      },
+    },
+    {
+      src: pokecards,
+      type: "video",
+      scale: 0.8,
+      x: "-22.82921994052868%",
+      y: "23.996802404672323%",
+      size: "calc(clamp(200px, 24vh, 24vw) * 0.8)",
+      lag: 0.06878657254413961,
+    },
+    {
+      src: sveltesudoku,
+      type: "video",
+      scale: 1,
+      x: "4.624383522462752%",
+      y: "-24.652043366431034%",
+      size: "calc(clamp(200px, 24vh, 24vw) * 1)",
+      lag: 0.12691648426524973,
+    },
+    {
+      src: abilityarena2,
+      type: "video",
+      scale: 1,
+      style: { objectPosition: "top center" },
+      divStyle: {
+        paddingTop: "calc(var(--root-text-scale) * 0.5)",
+        paddingLeft: "calc(var(--root-text-scale) * 0.5)",
+        paddingRight: "calc(var(--root-text-scale) * 0.5)",
+        objectPosition: "top center",
+        background: "#020320",
+      },
+      x: "-3.0672859447655942%",
+      y: "17.161707454907205%",
+      size: "calc(clamp(200px, 24vh, 24vw) * 1)",
+      lag: 0.13285811555007365,
+    },
+    {
+      src: ytcbk1.src,
+      type: "image",
+      scale: 1,
+      divStyle: {
+        objectPosition: "top center",
+        background: "#020320",
+      },
+      style: { objectFit: "cover" },
+      x: "10.63842487502052%",
+      y: "-2.636684757682742%",
+      size: "calc(clamp(200px, 24vh, 24vw) * 1)",
+      lag: 0.13974358320837132,
+    },
+    {
+      src: tuki,
+      type: "video",
+      scale: 1.2,
+      x: "21.472535283786133%",
+      y: "19.07442639726611%",
+      size: "calc(clamp(200px, 24vh, 28vw) * 1.2)",
+      lag: 0.0721067415502129,
+    },
+  ] as const
+).map((o) => ({ ...o, lag: o.lag * 2 }));
+---
+
+<div
+  style={{
+    height: "100%",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  <div
+    style={{
+      // transform: "translate(50%, 50%)",
+      position: "relative",
+      height: "100%",
+      width: "100%",
+      minWidth: "1000px",
+    }}
+  >
+    {
+      hardcodeditems.map((m) => (
+        <div
+          data-lag={m.lag}
+          style={{
+            position: "absolute",
+            left: `calc(${m.x} + 50%)`,
+            top: `calc(${m.y} + 50%)`,
+            transform: "translate(-50%, -50%)",
+            width: m.size,
+            height: m.size,
+          }}
+        >
+          <MediaFrame {...m} client:only />
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<!-- 
+
+type SmoothMediaFrameObj = {
+  lag?: number;
+  speed?: number;
+} & MediaFrameObj;
+const items = [
+  {
+    src: marbsoli.src,
+    type: "image",
+    scale: 1,
+  },
+  { src: wordlehelper.src, type: "image", scale: 0.8 },
+  { src: iidxsearcher.src, type: "image", scale: 1 },
+  { src: tuki, type: "video", scale: 1.2 },
+  {
+    src: foobar2k,
+    type: "video",
+    scale: 1.2,
+    style: {
+      objectFit: "contain",
+      background: "#151515",
+      padding: rtsc(0.5),
+    },
+  },
+  { src: mcashnav, type: "video", scale: 0.8 },
+  { src: pokecards, type: "video", scale: 0.8 },
+  { src: sveltesudoku, type: "video", scale: 1 },
+  {
+    src: abilityarena2,
+    type: "video",
+    scale: 1,
+    style: {
+      objectFit: "cover",
+      objectPosition: "top center",
+      background: "#020320",
+      padding: rtsc(0.5),
+    },
+  },
+  { src: ytcbk1.src, type: "image", scale: 1 },
+] as const;
+
+const positioned = items.map((o) => ({
+  ...o,
+  x: lodash.random(-8, 8, true),
+  y: lodash.random(-1, 1, true),
+}));
+
+const relaxed = relax(positioned, 23);
+console.log("relaxed", relaxed);
+
+const objs: SmoothMediaFrameObj[] = relaxed.map((o) => ({
+  ...o,
+  x: `${o.x}%`,
+  y: `${o.y}%`,
+  size: `calc(clamp(200px, 24vh, 24vw) * ${o.scale})`,
+  lag: lodash.random(0.06, 0.14, true),
+}));
+console.log("obj", objs); -->

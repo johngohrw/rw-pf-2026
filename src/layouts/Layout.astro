@@ -12,20 +12,34 @@ import "@styles/fonts.css";
     <title>John Rengwu</title>
   </head>
   <body>
-    <slot />
+    <div class="backdrop"></div>
+    <div class="content">
+      <slot />
+    </div>
   </body>
 </html>
 
 <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   html,
   body {
     margin: 0;
     width: 100%;
     height: 100%;
+
+    color: rgb(62 187 189);
   }
 
-  * {
-    box-sizing: border-box;
+  body {
+    position: relative;
   }
 
   /* root scale stuff */
@@ -45,8 +59,29 @@ import "@styles/fonts.css";
   }
 
   /* theme stuff */
+
   html {
     font-family: "SF Pro Display";
     font-size: var(--root-text-scale);
+    overscroll-behavior: none;
+  }
+  .content {
+    z-index: 1;
+  }
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      rgb(238, 235, 230),
+      rgb(237, 233, 228) calc(36% - calc(var(--scroll-progress) * 100%)),
+      rgb(226, 227, 216) calc(72% - calc(var(--scroll-progress) * 100%)),
+      rgb(230, 231, 222) calc(108% - calc(var(--scroll-progress) * 100%)),
+      rgb(220, 229, 230) calc(144% - calc(var(--scroll-progress) * 100%)),
+      rgb(169, 206, 229) calc(180% - calc(var(--scroll-progress) * 100%))
+    );
+    z-index: 0;
   }
 </style>
