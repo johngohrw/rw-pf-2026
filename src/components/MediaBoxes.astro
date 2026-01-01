@@ -76,7 +76,7 @@ const hardcodeditems = (
       x: "-14.060111911992292%",
       y: "-2.7525914791209702%",
       size: "calc(clamp(200px, 24vh, 24vw) * 1.2)",
-      lag: 0.12441908942529313,
+      lag: 0.09441908942529313,
     },
     {
       src: mcashnav,
@@ -175,7 +175,8 @@ const hardcodeditems = (
     {
       hardcodeditems.map((m) => (
         <div
-          data-lag={m.lag}
+          data-lag={m.lag * 1.5}
+          data-speed={1.2}
           style={{
             position: "absolute",
             left: `calc(${m.x} + 50%)`,

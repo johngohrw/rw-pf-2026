@@ -9,9 +9,13 @@ import ScrollSmootherWrapper from "@components/ScrollSmootherWrapper.astro";
 ---
 
 <Layout>
-  <div class="overlay">
+  <div class="overlay" style={{ top: 0 }}>
     <div class="overlay-content">
       <Brand client:only />
+    </div>
+  </div>
+  <div class="overlay" style={{ bottom: 0 }}>
+    <div class="overlay-content">
       <HeroText client:only />
     </div>
   </div>
@@ -41,7 +45,6 @@ import ScrollSmootherWrapper from "@components/ScrollSmootherWrapper.astro";
 <style>
   .overlay {
     position: fixed;
-    top: 0;
     width: 100svw;
     height: 100svh;
     z-index: 100;
