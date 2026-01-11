@@ -22,7 +22,9 @@ import ScrollSmootherWrapper from "@components/ScrollSmootherWrapper.astro";
   <div style={{ zIndex: 0 }}>
     <ScrollSmootherWrapper>
       <div class="frame">
-        <MediaBoxes />
+        <div style={{ position: "relative", height: "80%", top: "10%" }}>
+          <MediaBoxes />
+        </div>
       </div>
       <div class="frame centered-frame">
         <div class="cta">
@@ -48,9 +50,9 @@ import ScrollSmootherWrapper from "@components/ScrollSmootherWrapper.astro";
     width: 100svw;
     height: 100svh;
     z-index: 100;
-    mix-blend-mode: difference;
-    filter: invert(1);
+    mix-blend-mode: exclusion;
     pointer-events: none;
+    color: rgb(233, 227, 227);
   }
   .overlay-content {
     position: relative;
