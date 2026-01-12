@@ -62,8 +62,8 @@ export const GracefulVideoLoader = ({
         width: size,
         height: size,
         overflow: "hidden",
-        borderRadius: rtsc(1),
-        boxShadow: `0 3px 10px -2px rgba(0, 0, 0, 0.3)`,
+        borderRadius: "6px",
+        boxShadow: `0 ${rsc(0.3)} ${rsc(2)} ${rsc(-0.4)} rgba(0, 0, 0, 0.35)`,
 
         ...divStyle,
       }}
@@ -100,12 +100,11 @@ export const GracefulImageLoader = ({
       animate={{ translateY: "0%", opacity: hasLoaded ? 1 : 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
       style={{
-        borderRadius: rtsc(1),
-
         width: size,
         height: size,
         overflow: "hidden",
-        boxShadow: `0 3px 10px -2px rgba(0, 0, 0, 0.3)`,
+        borderRadius: "6px",
+        boxShadow: `0 ${rsc(0.3)} ${rsc(2)} ${rsc(-0.4)} rgba(0, 0, 0, 0.35)`,
         ...divStyle,
       }}
     >
