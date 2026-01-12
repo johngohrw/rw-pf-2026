@@ -3,9 +3,11 @@ import { HeroText } from "@components/HeroText";
 import { Brand } from "../components/Brand";
 import { ReactComponent } from "../components/ReactComponent";
 import Layout from "../layouts/Layout.astro";
-
+import ContactSection from "@components/ContactSection.astro";
 import MediaBoxes from "@components/MediaBoxes.astro";
 import ScrollSmootherWrapper from "@components/ScrollSmootherWrapper.astro";
+import LoopingLogos from "@components/LoopingLogos";
+import LoopingLogoSection from "@components/LoopingLogoSection.astro";
 ---
 
 <Layout>
@@ -26,21 +28,8 @@ import ScrollSmootherWrapper from "@components/ScrollSmootherWrapper.astro";
           <MediaBoxes />
         </div>
       </div>
-      <div class="frame centered-frame">
-        <div class="cta">
-          <h1>Contact</h1>
-          <div class="links">
-            <a href="mailto:johngohrw@gmail.com">Email</a>•
-            <a href="https://www.linkedin.com/in/rengwu">LinkedIn</a>•
-            <a href="http://t.me/jongowe">Telegram</a>
-          </div>
-          <div class="links">
-            <s title="not ready">Resume</s>•
-            <a href="https://leetcode.com/rengwu/">LeetCode</a>•
-            <a href="https://github.com/johngohrw">GitHub</a>
-          </div>
-        </div>
-      </div>
+      <LoopingLogoSection />
+      <ContactSection />
     </ScrollSmootherWrapper>
   </div>
 </Layout>
@@ -64,38 +53,5 @@ import ScrollSmootherWrapper from "@components/ScrollSmootherWrapper.astro";
     width: 100vw;
     position: relative;
     z-index: 1;
-  }
-
-  .centered-frame {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-  }
-
-  .cta {
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .cta a,
-  .cta s {
-    font-size: 1.2rem;
-    text-wrap: nowrap;
   }
 </style>
