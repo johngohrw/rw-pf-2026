@@ -1,4 +1,4 @@
-import { calc, motionVars, rtsc, rtscWithMax, varOf } from "@utils/theme";
+import { calc, motionVars, rtsc, rtscWithMin, varOf } from "@utils/theme";
 
 import {
   motion,
@@ -39,8 +39,8 @@ export const HeroText = () => {
         right: 0,
         bottom: 0,
         opacity: "var(--opacity)",
-        padding: `${rtsc(1)} ${rtsc(1.5)}`,
-        fontSize: `clamp(14px, ${rtsc(2)}, 15vw)`,
+        padding: `${rtsc(1.5)} ${rtsc(1.5)}`,
+        fontSize: rtscWithMin(1.5, "24px"),
         fontWeight: 500,
         lineHeight: 1,
         textAlign: "right",

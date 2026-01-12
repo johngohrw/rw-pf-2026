@@ -1,9 +1,24 @@
 import type { CSSProperties } from "react";
 
+import bola from "@assets/images/clientlogos/bola.png";
+import bolanotext from "@assets/images/clientlogos/bolanotext.png";
+import bolatext from "@assets/images/clientlogos/bolatext.png";
+import canarychecker from "@assets/images/clientlogos/canarychecker.svg";
+import hiredly from "@assets/images/clientlogos/hiredly.svg";
+import missioncontrol from "@assets/images/clientlogos/missioncontrol.svg";
+import mopress from "@assets/images/clientlogos/mopress.png";
+import pce from "@assets/images/clientlogos/pce.svg";
+import sunfresh from "@assets/images/clientlogos/sunfresh.png";
+import ttn from "@assets/images/clientlogos/ttn.svg";
+import watsons from "@assets/images/clientlogos/watsons.svg";
+import ijm from "@assets/images/clientlogos/ijm2.png";
+import payd from "@assets/images/clientlogos/paydibs.webp";
+import accendo from "@assets/images/clientlogos/accendo.webp";
+
 interface Logo {
   name: string;
   image: string;
-  link: string;
+  link?: string;
 }
 
 interface LogoLoopProps {
@@ -14,52 +29,56 @@ export default function LoopingLogos({ logos }: LogoLoopProps) {
   // Default logos if none provided
   const defaultLogos: Logo[] = [
     {
-      name: "React",
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      link: "https://react.dev",
+      name: "Bola.TV",
+      image: bolatext.src,
     },
     {
-      name: "Vue",
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
-      link: "https://vuejs.org",
+      name: "Hiredly",
+      image: hiredly.src,
+      link: "https://hiredly.com/",
     },
     {
-      name: "Angular",
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
-      link: "https://angular.io",
+      name: "Flanksource",
+      image: missioncontrol.src,
+      link: "https://flanksource.com/",
     },
     {
-      name: "Svelte",
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg",
-      link: "https://svelte.dev",
+      name: "Mopress",
+      image: mopress.src,
+      link: "https://mopress.io/",
     },
     {
-      name: "Next.js",
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-      link: "https://nextjs.org",
+      name: "Progress Centre Engineering",
+      image: pce.src,
     },
     {
-      name: "Nuxt",
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg",
-      link: "https://nuxt.com",
+      name: "Sunfresh",
+      image: sunfresh.src,
     },
     {
-      name: "TypeScript",
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-      link: "https://www.typescriptlang.org",
+      name: "TanTanNews",
+      image: ttn.src,
+      link: "https://tantannews.com/",
     },
     {
-      name: "Node.js",
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-      link: "https://nodejs.org",
+      name: "Watsons",
+      image: watsons.src,
+      link: "https://www.watsons.com.my/",
+    },
+    {
+      name: "IJM Corporation Berhad",
+      image: ijm.src,
+      link: "https://www.ijm.com/",
+    },
+    {
+      name: "Paydibs",
+      image: payd.src,
+      link: "https://paydibs.com/",
+    },
+    {
+      name: "Accendo Technologies",
+      image: accendo.src,
+      link: "https://accendotechnologies.com/",
     },
   ];
 
@@ -76,7 +95,10 @@ export default function LoopingLogos({ logos }: LogoLoopProps) {
                 href={logo.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={styles.link}
+                style={{
+                  ...styles.link,
+                  cursor: logo.link ? "pointer" : "auto",
+                }}
                 className="logo-link"
               >
                 <img src={logo.image} alt={logo.name} style={styles.logo} />
@@ -90,7 +112,44 @@ export default function LoopingLogos({ logos }: LogoLoopProps) {
                 href={logo.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={styles.link}
+                style={{
+                  ...styles.link,
+                  cursor: logo.link ? "pointer" : "auto",
+                }}
+                className="logo-link"
+              >
+                <img src={logo.image} alt={logo.name} style={styles.logo} />
+              </a>
+            </div>
+          ))}
+          {/* another set set for seamless loop */}
+          {logoList.map((logo, i) => (
+            <div key={`third-${i}`} style={styles.logoItem}>
+              <a
+                href={logo.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  ...styles.link,
+                  cursor: logo.link ? "pointer" : "auto",
+                }}
+                className="logo-link"
+              >
+                <img src={logo.image} alt={logo.name} style={styles.logo} />
+              </a>
+            </div>
+          ))}
+          {/* another set set for seamless loop */}
+          {logoList.map((logo, i) => (
+            <div key={`fourth-${i}`} style={styles.logoItem}>
+              <a
+                href={logo.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  ...styles.link,
+                  cursor: logo.link ? "pointer" : "auto",
+                }}
                 className="logo-link"
               >
                 <img src={logo.image} alt={logo.name} style={styles.logo} />
@@ -106,17 +165,17 @@ export default function LoopingLogos({ logos }: LogoLoopProps) {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-25%);
           }
         }
         
         .logo-track {
-          animation: scroll 20s linear infinite;
+          animation: scroll 25s linear infinite;
           transition-duration: 0.3s;
         }
         
         .logo-track:hover {
-          animation-play-state: paused;
+          // animation-play-state: paused;
         }
 
         .logo-link {
@@ -134,7 +193,7 @@ export default function LoopingLogos({ logos }: LogoLoopProps) {
 const styles: { [key: string]: CSSProperties } = {
   container: {
     width: "100%",
-    height: "400px",
+
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -156,15 +215,16 @@ const styles: { [key: string]: CSSProperties } = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginRight: "10vw",
+    marginRight: "8vw",
   },
   link: {
     display: "block",
     textDecoration: "none",
   },
   logo: {
-    width: "80px",
-    height: "80px",
-    objectFit: "contain",
+    height: "clamp(0px, 10vw, 100px)",
+    width: "clamp(0px, 20vw, 200px)",
+    objectFit: "scale-down",
+    // filter: "saturate(0)",
   },
 };

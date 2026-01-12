@@ -1,13 +1,23 @@
 ---
 import LoopingLogos from "./LoopingLogos";
+import { rtscWithMin, rsc, rtsc } from "@utils/theme";
 ---
 
 <div class="section">
-  <h1>People I've worked with</h1>
-  <LoopingLogos client:load />
+  <h1 style={{ fontSize: rtscWithMin(2, "24px") }}>Clients & Collaborators</h1>
+  <div style={{ padding: `2rem 0` }}>
+    <LoopingLogos client:load />
+  </div>
 </div>
 
 <style>
   .section {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 12rem;
+  }
+  .section h1 {
+    padding: 1.5rem;
   }
 </style>

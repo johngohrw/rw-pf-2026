@@ -1,26 +1,93 @@
 ---
-
+import { rtscWithMin } from "@utils/theme";
+import { ArrowUpRight } from "lucide-react";
 ---
 
-<div class="frame centered-frame">
-  <div class="cta">
-    <h1 class="title">Contact</h1>
-    <div class="links">
-      <a href="mailto:johngohrw@gmail.com">Email</a>•
-      <a href="https://www.linkedin.com/in/rengwu">LinkedIn</a>•
-      <a href="http://t.me/jongowe">Telegram</a>
+<div class="section-frame">
+  <h1
+    class="title"
+    style={{
+      fontSize: rtscWithMin(2, "24px"),
+    }}
+  >
+    Get in Touch
+  </h1>
+
+  <div class="links">
+    <div>
+      <a href="mailto:johngohrw@gmail.com">
+        <div>Email</div>
+        <ArrowUpRight size="1.3rem" />
+      </a>
+      <a href="https://www.linkedin.com/in/rengwu">
+        <div>LinkedIn</div>
+        <ArrowUpRight size="1.3rem" />
+      </a>
+      <a href="#">
+        <div>Resume</div>
+        <ArrowUpRight size="1.3rem" />
+      </a>
     </div>
-    <div class="links">
-      <s title="not ready">Resume</s>•
-      <a href="https://leetcode.com/rengwu/">LeetCode</a>•
-      <a href="https://github.com/johngohrw">GitHub</a>
+    <div>
+      <a href="https://github.com/johngohrw">
+        <div>GitHub</div>
+        <ArrowUpRight size="1.3rem" />
+      </a>
+      <a href="https://leetcode.com/rengwu/">
+        <div>LeetCode</div>
+        <ArrowUpRight size="1.3rem" />
+      </a>
+      <a href="http://t.me/jongowe">
+        <div>Telegram</div>
+        <ArrowUpRight size="1.3rem" />
+      </a>
     </div>
   </div>
 </div>
 
 <style>
+  .section-frame {
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1.5rem;
+
+    justify-content: center;
+  }
+
   .title {
-    padding-left: calc(var(--root-text-scale) * 1);
+    /* text-align: center; */
+    padding-bottom: 2rem;
+  }
+
+  .links {
+    display: flex;
+
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .links > div {
+    display: flex;
+    gap: 0.75rem;
+  }
+  a {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.1rem;
+    /* border: 1px solid black; */
+    padding: 0.2rem 0.3rem 0.2rem 0.5rem;
+    background: rgba(0, 0, 0, 0.1);
+    color: black;
+    border-radius: 0.2rem;
+    text-decoration: none;
+  }
+  a:hover {
+    background: black;
+    color: white;
   }
 </style>
 
@@ -54,6 +121,6 @@
 
   .cta a,
   .cta s {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-wrap: nowrap;
   } -->

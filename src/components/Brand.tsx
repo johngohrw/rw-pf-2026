@@ -36,7 +36,7 @@ export const Brand = () => {
         fontSize: `var(--resizable-scale)`,
         fontWeight: 700,
         transformOrigin: "top left",
-        padding: rtsc(1),
+        padding: "1rem 1.5rem",
         lineHeight: 1,
         textWrap: "nowrap",
       }}
